@@ -1,6 +1,7 @@
 //Criar uma classe Camera com propriedades privadas [id, marca, cor, preço] com metodos getter e 
 //setter para acessar e modificar os valores. Criar 3 objetos dela e imprimir todos os detalhes
 
+//criando a classe Camera
 class Camera{
   int  _id;
   String _marca;
@@ -21,18 +22,18 @@ class Camera{
   set cor(String novaCor) => _cor = novaCor;
   set preco(num novoPreco) => _preco = novoPreco;
 
-  //print
   void detalhes() {
     print("Camera $id:\n Marca: $marca | Cor: $cor, | Preço: $preco");
   }
 }
 
 void main(){
-  //3 objetos
+  //criando 3 objetos
   Camera camera1 = Camera(1, "Instax", "Rosa", 500.00);
   Camera camera2 = Camera(2, "Sony", "Preto", 2950.00);
   Camera camera3 = Camera(3, "Canon", "Vermelho", 3730.99);
 
+  //imprimindo todos os valores
   camera1.detalhes();
   camera2.detalhes();
   camera3.detalhes();
@@ -41,6 +42,7 @@ void main(){
   camera1.preco = 320.00;
   camera1. cor = "Azul";
 
+  //imprimindo o valor da camera alterada
   print("\nDepois da alteração: ");
   camera1.detalhes();
 
