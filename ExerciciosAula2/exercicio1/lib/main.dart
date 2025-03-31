@@ -9,12 +9,6 @@ void main() => runApp(MainApp());
 class MainApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    final textTheme = Theme.of(context).textTheme; // Acessa o tema padrão para textos da árvore de widgets
-    final mediaQuery = MediaQuery.of(context); // Acessa informações da tela
-    final alturaTela = mediaQuery.size.height; // Altura da tela
-    final comprimentoTela = mediaQuery.size.width; // Largura da tela
-
-
     return MaterialApp(
       title: "MeuApp",
       home: Scaffold(
