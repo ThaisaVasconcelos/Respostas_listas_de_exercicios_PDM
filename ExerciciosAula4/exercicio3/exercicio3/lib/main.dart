@@ -22,7 +22,7 @@ class TaskHomePage extends StatefulWidget {
 class _TaskHomePageState extends State<TaskHomePage> {
   List<Map<String, dynamic>> tasks = List.generate(5, (index) {
     return {
-      "title": "Task 2022-07-09 18:08:31.${index + 734244}",
+      "title": "Task 2022-07-09 \n18-08:31.${index + 734244}",
       "isChecked": false,
     };
   });
@@ -47,8 +47,11 @@ class _TaskHomePageState extends State<TaskHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Kindacode.com"),
+        title: Text("Kindacode.com",
+          style: TextStyle(color: Colors.white),
+        ),
         centerTitle: true,
+        backgroundColor: Colors.blue,
       ),
       body: Padding(
         padding: const EdgeInsets.all(12.0),
@@ -57,7 +60,16 @@ class _TaskHomePageState extends State<TaskHomePage> {
           children: [
             ElevatedButton(
               onPressed: () {},
-              child: Text("View Completed Tasks"),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue,              // Fundo azul
+                shape: RoundedRectangleBorder(             // Borda quadrada
+                  borderRadius: BorderRadius.zero,
+                ),
+              ),
+              child: Text(
+                "View Completed Tasks",
+                style: TextStyle(color: Colors.white),     // Texto branco (opcional)
+              ),
             ),
             SizedBox(height: 10),
             Text(
@@ -91,7 +103,16 @@ class _TaskHomePageState extends State<TaskHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _showDialog,
-        child: Icon(Icons.add),
+        backgroundColor: Colors.blue,            // Fundo azul
+        shape: const CircleBorder(),             // Formato redondo
+        child: Text(
+          "+",
+          style: TextStyle(
+            fontSize: 24,
+            color: Colors.white,                 // Texto branco
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
     );
   }
