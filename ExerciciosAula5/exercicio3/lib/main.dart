@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'App com Tema Azul',
+      title: 'App com Tema Amarelo',
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.blue, // Tema principal azul
         primarySwatch: Colors.blue,
@@ -25,7 +25,7 @@ class HomePage extends StatelessWidget {
     // Usando Theme para sobrescrever apenas a parte desejada
     return Scaffold(
       appBar: AppBar(
-        title: Text('Tema Azul'),
+        title: Text('Temas'),
         centerTitle: true,
       ),
       body: Theme(
